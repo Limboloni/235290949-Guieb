@@ -10,7 +10,7 @@ start "" "https://www.duckduckgo.com"
 start "" "https://www.wikipedia.org"
 
 :: Launch Calculator
-echo Starting Calculator....
+echo Starting Calculator...
 start calc
 
 :: Launch Notepad
