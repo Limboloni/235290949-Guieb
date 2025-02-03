@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PointClick - Gaming Peripherals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="PointClickLogo.webp" alt="PointClick Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-text">
+            <h1>Welcome to PointClick</h1>
+            <p>Your one-stop shop for gaming peripherals!</p>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-wrapper">
+            <button id="prevBtn">&#10094;</button>
+            <div class="product-container">
+                <div class="product-slider">
+                    <div class="product"><img src="mouse1.jpg" alt="Gaming Mouse"></div>
+                    <div class="product"><img src="keyboard1.jpg" alt="Gaming Keyboard"></div>
+                    <div class="product"><img src="mouse2.jpg" alt="Gaming Mouse"></div>
+                    <div class="product"><img src="keyboard2.jpg" alt="Gaming Keyboard"></div>
+                    <div class="product"><img src="mouse3.jpg" alt="Gaming Mouse"></div>
+                    <div class="product"><img src="keyboard3.jpg" alt="Gaming Keyboard"></div>
+                </div>
+            </div>
+            <button id="nextBtn">&#10095;</button>
+        </div>
+        <a href="#shop" class="cta-btn">Shop Now</a>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>PointClick provides the best gaming mice, keyboards, and other peripherals designed for serious gamers!</p>
+    </section>
+
+    <!-- Contact Section - Now at the Bottom -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions? Reach out to us!</p>
+        <form id="contactForm">
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 PointClick. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
