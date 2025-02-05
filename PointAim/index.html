@@ -3,73 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PointClick - Gaming Peripherals</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-        <div class="logo-container">
-            <img src="PointClickLogo.webp" alt="PointClick Logo" class="logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="home">
+        <div class="logo">
+            <img src="PointClickLogo.webp" alt="Website Logo">
         </div>
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero" class="hero">
-        <div class="hero-text">
-            <h1>Welcome to PointClick</h1>
-            <p>Your one-stop shop for gaming peripherals!</p>
+        <h1>Welcome to Our Store</h1>
+        <p>Your one-stop shop for the best gaming keyboards and mice.</p>
+        <div class="featured-products">
+            <img src="sora.jpg" alt="Featured Product 1">
+            <img src="wooting.jpg" alt="Featured Product 2">
         </div>
-    </section>
-
-    <section id="products">
-        <h2>Our Products</h2>
-        <div class="product-wrapper">
-            <button id="prevBtn">&#10094;</button>
-            <div class="product-container">
-                <div class="product-slider">
-                    <div class="product"><img src="gpx.jpg" alt="Gaming Mouse"></div>
-                    <div class="product"><img src="wooting.jpg" alt="Gaming Keyboard"></div>
-                    <div class="product"><img src="sora.jpg" alt="Gaming Mouse"></div>
-                    <div class="product"><img src="keyboard2.jpg" alt="Gaming Keyboard"></div>
-                    <div class="product"><img src="mouse3.jpg" alt="Gaming Mouse"></div>
-                    <div class="product"><img src="keyboard3.jpg" alt="Gaming Keyboard"></div>
-                </div>
-            </div>
-            <button id="nextBtn">&#10095;</button>
-        </div>
-        <a href="#shop" class="cta-btn">Shop Now</a>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>PointClick provides the best gaming mice, keyboards, and other peripherals designed for serious gamers!</p>
-    </section>
-
-    <!-- Contact Section - Now at the Bottom -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have any questions? Reach out to us!</p>
-        <form id="contactForm">
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 PointClick. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-
+    </div>
 </body>
 </html>
