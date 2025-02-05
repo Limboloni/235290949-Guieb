@@ -1,35 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
+        <div class="logo-container">
+            <img src="PointClickLogo.webp" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </nav>
-    <div class="carousel">
-        <input type="radio" name="carousel" id="slide1" checked>
-        <input type="radio" name="carousel" id="slide2">
-        <input type="radio" name="carousel" id="slide3">
-        <div class="carousel-inner">
-            <img src="wooting.jpg" alt="Keyboard 1">
-            <img src="gpx.jpg" alt="Mouse 1">
-            <img src="wooting.jpg" alt="Keyboard 2">
-            <img src="wooting.jpg" alt="Keyboard 3">
-            <img src="gpx.jpg" alt="Mouse 2">
-            <img src="wooting.jpg" alt="Keyboard 4">
-            <img src="gpx.jpg" alt="Mouse 3">
-            <img src="wooting.jpg" alt="Keyboard 5">
-            <img src="gpx.jpg" alt="Mouse 4">
+    
+    <div class="products-container">
+        <h1>Our Products</h1>
+
+        <!-- Product Gallery -->
+        <div class="product-gallery" id="productGallery">
+            <!-- First batch of 3 products -->
+            <div class="product">
+                <img src="sora.jpg" alt="Product 1">
+                <h3>Ninjusu Sora</h3>
+                <p>$50.00</p>
+            </div>
+            <div class="product">
+                <img src="wooting.jpg" alt="Product 2">
+                <h3>Wooting 80 HE</h3>
+                <p>$80.00</p>
+            </div>
+            <div class="product">
+                <img src="gpx.jpg" alt="Product 3">
+                <h3>GPX2</h3>
+                <p>$40.00</p>
+            </div>
         </div>
-        <div class="carousel-controls">
-            <label for="slide1"></label>
-            <label for="slide2"></label>
-            <label for="slide3"></label>
-        </div>
+        
+        <!-- Next Button to Load More Products -->
+        <button id="nextBtn">Next</button>
     </div>
+
+    <script>
+        // Product data for different batches
+        const productsBatch = [
+            [
+                { img: "sora.jpg", name: "Ninjusu Sora", price: "$50.00" },
+                { img: "wooting.jpg", name: "Wooting 80 HE", price: "$80.00" },
+                { img: "gpx.jpg", name: "GPX2", price: "$40.00" }
+            ],
+            [
+                { img: "product4.jpg", name: "Product 4", price: "$60.00" },
+                { img: "product5.jpg", name: "Product 5", price: "$75.00" },
+                { img: "product6.jpg", name: "Product 6", price: "$55.00" }
+            ],
+            [
+                { img: "product7.jpg", name: "Product 7", price: "$65.00" },
+                { img: "product8.jpg", name: "Product 8", price: "$85.00" },
+                { img: "product9.jpg", name: "Product 9", price: "$45.00" }
+            ]
+        ];
+
+        let currentBatch = 0;
+
+        const nextBtn = document.getElementById("nextBtn");
+        const productGallery = document.getElementById("productGallery");
+
+        nextBtn.addEventListener("click", () => {
+            // Move to the next batch and reset to the first batch if it exceeds
+            currentBatch = (currentBatch + 1) % productsBatch.length;
+
+            // Clear the current product gallery
+            productGallery.innerHTML = "";
+
+            // Add the new batch of products
+            productsBatch[currentBatch].forEach(product => {
+                const productDiv = document.createElement("div");
+                productDiv.classList.add("product");
+                productDiv.innerHTML = `
+                    <img src="${product.img}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>${product.price}</p>
+                `;
+                productGallery.appendChild(productDiv);
+            });
+        });
+    </script>
+
 </body>
 </html>
