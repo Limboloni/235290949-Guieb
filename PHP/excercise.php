@@ -6,7 +6,7 @@
 <title>Php Exercise</title>
 </head>
 <body>
-
+<h1>Php Exercise</h1>
 <?php
 // Exercise 1: Variables and Operators
 echo "Exercise 1: Variables and Operators <br>";
@@ -17,11 +17,13 @@ $diff = $a - $b;
 $prod = $a * $b;
 $quot = $a / $b;
 
-echo "<p>The sum of $a and $b is $sum.</p>";
-echo "<p>The difference of $a and $b is $diff.</p>";
-echo "<p>The product of $a and $b is $prod.</p>";
-echo "<p>The quotient of $a and $b is $quot.</p>";
+echo "The sum of $a and $b is $sum.<br>";
+echo "The difference of $a and $b is $diff.<br>";
+echo "The product of $a and $b is $prod.<br>";
+echo "The quotient of $a and $b is $quot.<br>";
 ?>
+
+<br>
 
 <?php
 // Exercise 2: Conditional Statements
@@ -31,50 +33,55 @@ $number = 10;
 echo "The number is $number <br>";
 
 if ($number % 2 == 0) {
-    echo "The number is even. ";
+    echo "The number is even ";
 } else {
-    echo "The number is odd. ";
+    echo "The number is odd ";
 }
 
 if ($number > 0) {
-    echo "<p>And the number is positive.</p>";
+    echo "and the number is positive.<br>";
 } elseif ($number < 0) {
-    echo "<p>And the number is negative.</p>";
+    echo "and the number is negative.<br>";
 } else {
-    echo "<p>And the number is zero.</p>";
+    echo "and the number is zero.<br>";
 }
-?>
 
+?>
+<br>
 <?php
 // Exercise 3: Loops
 echo "Exercise 3: Loops <br>";
 for ($i = 1; $i <= 100; $i++) {
     if ($i % 3 == 0 && $i % 5 == 0) {
-        echo "<p>FizzBuzz</p>";
+        echo " Fizz Buzz ";
     } elseif ($i % 3 == 0) {
-        echo "<p>Fizz</p>";
+        echo " Fizz ";
     } elseif ($i % 5 == 0) {
-        echo "<p>Buzz</p>";
+        echo " Buzz ";
     } else {
-        echo "<p>$i</p>";
+        echo " $i ";
     }
 }
 
 $fib1 = 0;
 $fib2 = 1;
 $count = 0;
-echo "<p>Even Fibonacci numbers:</p>";
+echo "<br>";
+echo "<br>";
+echo "Even Fibonacci numbers:<br>";
 
 while ($count < 10) {
     $next = $fib1 + $fib2;
     if ($next % 2 == 0) {
-        echo "<p>$next</p>";
+        echo "$next<br>";
     }
     $fib1 = $fib2;
     $fib2 = $next;
     $count++;
 }
 ?>
+
+<br>
 
 <?php
 // Exercise 4: Functions
@@ -103,8 +110,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!-- Exercise 5: Form Handling -->
 <form method="post">
-    Name: <input type="text" name="name">
-    Number: <input type="number" name="number">
+    <h3>Name:</h3> <input type="text" name="name">
+    <h3>Number:</h3> <input type="number" name="number">
     <input type="submit" value="Submit">
 </form>
 
